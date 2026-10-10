@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paulo Miguel R. Limpin | Computer Science Student</title>
+<meta name="description" content="Portfolio and resume of Paulo Miguel R. Limpin, BS Computer Science student at Holy Angel University. Projects: Chami fruit ripeness app and StudyBuddy.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥭</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="#top">Paulo Limpin</a>
+  <nav aria-label="Main">
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+    <a href="#availability">Availability</a>
+    <a href="#contact" class="pill">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero wrap">
+  <div class="hero-text">
+    <h1>Paulo Miguel R. Limpin</h1>
+    <p class="role">BS Computer Science student at Holy Angel University, building apps that solve everyday problems.</p>
+    <p class="lead">I made a fruit ripeness app that runs offline on a phone, and a study planner for students. I also edit photos and videos, and I'm looking for a part-time role where I can keep learning and contribute.</p>
+    <div class="actions">
+      <a class="btn primary" href="#projects">See my projects</a>
+      <a class="btn" href="mailto:paulolimpin0@gmail.com">Email me</a>
+    </div>
+  </div>
+  <figure class="hero-photo">
+    <img src="assets/photo.png" alt="Portrait of Paulo Miguel Limpin in a dark suit and tie" width="393" height="399">
+  </figure>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="projects">
+  <div class="wrap">
+    <h2>Projects</h2>
+  </div>
+
+  <!-- CHAMI -->
+  <article class="chami" aria-labelledby="chami-title">
+    <div class="wrap">
+      <div class="chami-head">
+        <div>
+          <h3 id="chami-title">Chami</h3>
+          <p class="thesis">Thesis project: A MobileNetV4-Based Ripeness Classification Application for Carabao Mango, Lakatan Banana, and Red Lady Papaya</p>
+        </div>
+        <ul class="ripeness" aria-label="Ripeness classes the app reports">
+          <li class="unripe">Unripe</li>
+          <li class="ripe">Ripe</li>
+          <li class="over">Overripe</li>
+        </ul>
+      </div>
+
+      <div class="chami-body">
+        <p>Chami checks fruit ripeness from a photo. You upload an image or use Live Scan with the camera, and an on-device MobileNetV4 model tells you if the fruit is unripe, ripe, or overripe, with a confidence score. Everything runs offline, so it works without internet.</p>
+        <ul class="facts">
+          <li><strong>Grad-CAM view</strong> shows which part of the fruit the model focused on.</li>
+          <li><strong>Shelf-life and storage tips</strong> come with each result.</li>
+          <li><strong>Batches and local orders</strong> group saved scans by fruit type and track customer deliveries.</li>
+          <li><strong>Guest mode or account</strong>, with scan history saved on the device.</li>
+        </ul>
+        <div class="actions">
+          <a class="btn lime" href="https://github.com/Matt-CRL/fruit-ripeness-detector" target="_blank" rel="noopener">View on GitHub</a>
+          <a class="btn ghost" href="https://drive.google.com/drive/folders/1tsg6w73jJy9ij_BaFfVcrUIMqYXucoem" target="_blank" rel="noopener">Download the app</a>
+        </div>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="Chami app screens" data-gallery="chami">
+        <button role="tab" aria-selected="true" aria-controls="chami-start" id="t-start">Getting started</button>
+        <button role="tab" aria-selected="false" aria-controls="chami-scan" id="t-scan">Scan</button>
+        <button role="tab" aria-selected="false" aria-controls="chami-result" id="t-result">Results</button>
+        <button role="tab" aria-selected="false" aria-controls="chami-batch" id="t-batch">Batches and orders</button>
+      </div>
+
+      <div class="panel" id="chami-start" role="tabpanel" aria-labelledby="t-start">
+        <p class="cap">Start as a guest with no account, or sign in to sync. A short walkthrough explains how to scan, read the result, and organize batches.</p>
+        <div class="phones">
+          <img src="assets/app/splash.png" alt="Chami splash screen" loading="lazy">
+          <img src="assets/app/welcome.png" alt="Welcome screen with guest mode, sign in and create account" loading="lazy">
+          <img src="assets/app/onboard1.png" alt="Onboarding step 1: scan or upload a fruit" loading="lazy">
+          <img src="assets/app/onboard2.png" alt="Onboarding step 2: understand the assessment" loading="lazy">
+          <img src="assets/app/onboard3.png" alt="Onboarding step 3: organize fruits into batches" loading="lazy">
+          <img src="assets/app/home.png" alt="Home screen with Start scan button" loading="lazy">
+          <img src="assets/app/profile.png" alt="Profile screen in guest mode with dark mode toggle" loading="lazy">
+        </div>
+      </div>
+
+      <div class="panel" id="chami-scan" role="tabpanel" aria-labelledby="t-scan" hidden>
+        <p class="cap">Pick one of three supported fruits, then upload a photo for a thorough check or use Live Scan for a quicker one.</p>
+        <div class="phones">
+          <img src="assets/app/supported.png" alt="Supported fruits and photo tips" loading="lazy">
+          <img src="assets/app/scan-method.png" alt="Choose a scan method: upload image or live scan" loading="lazy">
+          <img src="assets/app/upload.png" alt="Upload one fruit image screen" loading="lazy">
+          <img src="assets/app/upload-preview.png" alt="Selected mango photo being assessed" loading="lazy">
+          <img src="assets/app/live-scan.png" alt="Live Scan identifying an unripe Lakatan banana at 99 percent confidence" loading="lazy">
+        </div>
+      </div>
+
+      <div class="panel" id="chami-result" role="tabpanel" aria-labelledby="t-result" hidden>
+        <p class="cap">Each result shows the ripeness class, confidence, and a Grad-CAM heatmap. Unclear photos get a clear error with tips for a better shot. Saved scans stay in History.</p>
+        <div class="phones">
+          <img src="assets/app/result.png" alt="Assessment result: overripe Carabao mango" loading="lazy">
+          <img src="assets/app/result-detail.png" alt="Result details with model version and shelf-life estimate" loading="lazy">
+          <img src="assets/app/gradcam.png" alt="Grad-CAM heatmap overlay on a fruit" loading="lazy">
+          <img src="assets/app/not-recognized.png" alt="Fruit not recognized error with tips to try a clearer photo" loading="lazy">
+          <img src="assets/app/history.png" alt="History list of saved scans" loading="lazy">
+        </div>
+      </div>
+
+      <div class="panel" id="chami-batch" role="tabpanel" aria-labelledby="t-batch" hidden>
+        <p class="cap">Group scans of one fruit type into a batch, see unripe, ripe, and overripe counts, read storage guidance, and attach a local order with customer details and delivery date.</p>
+        <div class="phones">
+          <img src="assets/app/batches.png" alt="Batches list with search and order filters" loading="lazy">
+          <img src="assets/app/create-batch.png" alt="Create batch form" loading="lazy">
+          <img src="assets/app/batch-details.png" alt="Batch details with ripeness summary" loading="lazy">
+          <img src="assets/app/shelf-life.png" alt="Shelf-life and storage sheet" loading="lazy">
+          <img src="assets/app/local-order.png" alt="Create local order form" loading="lazy">
+          <img src="assets/app/batch-order.png" alt="Batch with a pending order marked completed" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- STUDYBUDDY -->
+  <article class="buddy wrap" aria-labelledby="buddy-title">
+    <div class="buddy-copy">
+      <h3 id="buddy-title">StudyBuddy</h3>
+      <p>A web app that helps students keep track of assignments and classes. Add tasks with a subject and due date, filter them by pending, late, or done, build a weekly class schedule, and plan study sessions. The home page shows today's tasks, upcoming deadlines, progress, and a study tip.</p>
+      <ul class="facts">
+        <li>Task list with search and Pending, Late, Done, All filters</li>
+        <li>Weekly class schedule and study session planner</li>
+        <li>Profile with study statistics and data backup export</li>
+      </ul>
+      <div class="actions">
+        <a class="btn blue" href="https://studybuddy-petah2.vercel.app" target="_blank" rel="noopener">Open StudyBuddy</a>
+      </div>
+    </div>
+
+    <div class="shots">
+      <div class="tabs small" role="tablist" aria-label="StudyBuddy screens" data-gallery="buddy">
+        <button role="tab" aria-selected="true" data-img="home">Home</button>
+        <button role="tab" aria-selected="false" data-img="tasks">Tasks</button>
+        <button role="tab" aria-selected="false" data-img="schedule">Schedule</button>
+        <button role="tab" aria-selected="false" data-img="profile">Profile</button>
+      </div>
+      <div class="browser">
+        <div class="bar"><i></i><i></i><i></i><span>studybuddy-petah2.vercel.app</span></div>
+        <img id="buddy-shot" src="assets/studybuddy/home.jpg" alt="StudyBuddy home screen" width="1914" height="939">
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about wrap">
+  <h2>About me</h2>
+  <div class="about-grid">
+    <div class="block">
+      <h3>Education</h3>
+      <dl class="timeline">
+        <div>
+          <dt>BS Computer Science</dt>
+          <dd>Holy Angel University<br><span>2022 to present</span></dd>
+        </div>
+        <div>
+          <dt>Junior and Senior High School</dt>
+          <dd>Holy Angel University, STEM strand<br><span>2017 to 2022. Grade 12 with honors.</span></dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="block">
+      <h3>Experience</h3>
+      <dl class="timeline">
+        <div>
+          <dt>Student Assistant</dt>
+          <dd>Holy Angel University<br><span>2022 to present</span></dd>
+        </div>
+      </dl>
+      <h3 class="sub">Certificates and awards</h3>
+      <ul class="plain">
+        <li>Relational Database Certified</li>
+        <li>Dean's Lister, 2nd year</li>
+      </ul>
+    </div>
+
+    <div class="block wide">
+      <h3>Skills</h3>
+      <ul class="skills">
+        <li><strong>Creative media</strong> Photo and video editing, photography, basic video production.</li>
+        <li><strong>Computer literacy</strong> Microsoft Word, Excel, and PowerPoint.</li>
+        <li><strong>Time management</strong> Handles responsibilities well and finishes work on deadline.</li>
+        <li><strong>Communication</strong> Works well with others and shares ideas clearly in team and leadership settings.</li>
+        <li><strong>Analytical thinking</strong> Thinks critically and makes practical decisions.</li>
+        <li><strong>Work ethic</strong> Organized, dependable, and attentive to details.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- AVAILABILITY -->
+<section id="availability" class="avail wrap">
+  <h2>Availability</h2>
+  <div class="avail-grid">
+    <div>
+      <h3>Monday, Tuesday, Wednesday, Thursday, Friday</h3>
+      <p>8:00 AM to 4:00 PM</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Let's work together</h2>
+    <p>Open to part-time roles and internships. The fastest way to reach me is email.</p>
+    <ul class="contact-list">
+      <li><span>Email</span><a href="mailto:paulolimpin0@gmail.com">paulolimpin0@gmail.com</a></li>
+      <li><span>School email</span><a href="mailto:prlimpin1@student.hau.edu.ph">prlimpin1@student.hau.edu.ph</a></li>
+      <li><span>Phone</span><a href="tel:+639177280023">0917 728 0023</a></li>
+      <li><span>Location</span>Angeles City, Pampanga</li>
+    </ul>
+  </div>
+  <p class="foot wrap">© <span id="yr">2026</span> Paulo Miguel R. Limpin</p>
+</section>
+
+</main>
+<script src="script.js"></script>
+</body>
+</html>
